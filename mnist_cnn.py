@@ -18,7 +18,7 @@ x_test = x_test / 255.0
 
 cnn_model = tf.keras.Sequential()
 
-cnn_model.add(tf.keras.layers.Conv2D(filters = 32, kernel_size = (3, 3)))
+cnn_model.add(tf.keras.layers.Conv2D(filters = 32, kernel_size = (3, 3), activation = tf.keras.activations.relu))
 cnn_model.add(tf.keras.layers.MaxPool2D(pool_size = (2, 2)))
 cnn_model.add(tf.keras.layers.Flatten())
 cnn_model.add(tf.keras.layers.Dense(units = 256, activation = tf.keras.activations.relu))
